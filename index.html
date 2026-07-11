@@ -8,13 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,616;1,616&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
 </head>
 <body>
     <header>
       <a href="./index.html">
         <img
-          src="./img/logo-helly-hansen-hansen.png"
+          src="./img/img-logos/logo-hh.png"
           width="150px"
           alt="logo de la empresa"
           class="logo-header"
@@ -32,93 +34,261 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section class="seccion-principal-index">
         <div class="primera-plana">
-          <h1>Helly Hansen Workwear</h1>
-          <h2>La mejor indumentaria técnica para trabajo, importada desde Noruega.</h2>
+            <h1>Helly Hansen Workwear</h1>
+            <h2>La mejor indumentaria técnica para trabajo, importada desde Noruega.</h2>
         </div>
-        <br><br> 
-       <div class="grilla-productos">
-        <article class="grilla-producto">
-          <div>
-              <h3 class="grilla-producto-title">Camperas</h3>
-              <p>Máxima protección contra el frío extremo, el viento y la lluvia. Ideales para trabajos a la intemperie.</p>
-          </div>
-          <button class="grilla-producto-button">Ver modelos</button>
-        </article>
-          <article class="grilla-producto">
-            <div>
-              <h3 class="grilla-producto-title">Primeras pieles</h3>
-              <p>Control avanzado de humedad y retención térmica para mantener el cuerpo seco y aislado.</p>
-            </div>
-              <button class="grilla-producto-button">Ver modelos</button>
-          </article>
-          <article class="grilla-producto">
-            <div>
-              <h3 class="grilla-producto-title">Pantalones</h3>
-              <p>Telas de alta resistencia y múltiples bolsillos para herramientas.</p>
-            </div>
-            <button class="grilla-producto-button">Ver modelos</button>
-          </article>
-          <article class="grilla-producto">
-            <div>
-              <h3 class="grilla-producto-title">Accesorios</h3>
-              <p>Gorros térmicos, mochilas y todo lo necesario para completar tu equipo de seguridad.</p>
-            </div>
-              <button class="grilla-producto-button">Ver modelos</button>
-          </article>
+        <div class="grilla-productos">
+            <!-- Tarjeta 1: Primeras pieles -->
+            <article class="grilla-producto">
+                <div>
+                    <h3 class="grilla-producto-title">Primera piel</h3>
+                    <p>Control avanzado de humedad y retención térmica con tecnología Lifa® para mantener el cuerpo seco.</p>
+                    
+                    <div id="carruselPieles" class="carousel slide carrusel-producto" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/img-grilla-productos/primerapiel1.jpg" class="d-block w-100" alt="HH Lifa Crew">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/primerapiel2.jpg" class="d-block w-100" alt="HH Lifa Pant">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/primerapiel3.jpg" class="d-block w-100" alt="HH Lifa Max">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselPieles" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselPieles" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="grilla-producto-button">Ver más modelos</button>
+            </article>
+
+            <!-- Tarjeta 2: Segunda capa polar (NUEVA) -->
+            <article class="grilla-producto">
+                <div>
+                    <h3 class="grilla-producto-title">Segunda capa</h3>
+                    <p>Aislamiento térmico intermedio, liviano y altamente respirable para mantener el calor corporal activo.</p>
+                    
+                    <div id="carruselPolar" class="carousel slide carrusel-producto" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/img-grilla-productos/segundacapa1.jpg" class="d-block w-100" alt="Campera polar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/segundacapa2.jpg" class="d-block w-100" alt="Pantalón polar">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/segundacapa3.jpg" class="d-block w-100" alt="Polar de alta visibilidad">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselPolar" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselPolar" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="grilla-producto-button">Ver más modelos</button>
+            </article>
+
+            <!-- Tarjeta 3: Camperas -->
+            <article class="grilla-producto">
+                <div>
+                    <h3 class="grilla-producto-title">Camperas</h3>
+                    <p>Máxima protección climática con membranas Helly Tech® impermeables y cortavientos.</p>
+                    
+                    <div id="carruselCamperas" class="carousel slide carrusel-producto" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/img-grilla-productos/campera1.jpg" class="d-block w-100" alt="Campera impermeable HH">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/campera2.jpg" class="d-block w-100" alt="Chaqueta de alta visibilidad">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/campera3.jpg" class="d-block w-100" alt="Campera de frío extremo">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselCamperas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselCamperas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="grilla-producto-button">Ver más modelos</button>
+            </article>
+
+            <!-- Tarjeta 4: Pantalones -->
+            <article class="grilla-producto">
+                <div>
+                    <h3 class="grilla-producto-title">Pantalones</h3>
+                    <p>Confeccionados en telas elásticas de alta resistencia, bolsillos flotantes y refuerzos en Cordura®.</p>
+                    
+                    <div id="carruselPantalones" class="carousel slide carrusel-producto" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/img-grilla-productos/pantalon1.jpg" class="d-block w-100" alt="Pantalón de trabajo industrial">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/pantalon2.jpg" class="d-block w-100" alt="Pantalón cargo de alta resistencia">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/pantalon3.jpg" class="d-block w-100" alt="Pantalón impermeable HH">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselPantalones" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselPantalones" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="grilla-producto-button">Ver más modelos</button>
+            </article>
+
+            <!-- Tarjeta 5: Calzado (NUEVA) -->
+            <article class="grilla-producto">
+                <div>
+                    <h3 class="grilla-producto-title">Calzado</h3>
+                    <p>Zapatillas y botines de seguridad certificados con puntera de protección y suelas antideslizantes.</p>
+                    
+                    <div id="carruselCalzado" class="carousel slide carrusel-producto" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/img-grilla-productos/calzado1.jpg" class="d-block w-100" alt="Calzado sin puntera">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/calzado2.jpg" class="d-block w-100" alt="Zapato con puntera de seguridad">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/calzado3.jpg" class="d-block w-100" alt="Botas de protección industrial">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselCalzado" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselCalzado" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="grilla-producto-button">Ver más modelos</button>
+            </article>
+
+            <!-- Tarjeta 6: Accesorios -->
+            <article class="grilla-producto">
+                <div>
+                    <h3 class="grilla-producto-title">Accesorios</h3>
+                    <p>Gorros térmicos, mochilas técnicas y complementos diseñados para la máxima durabilidad en obra.</p>
+                    
+                    <div id="carruselAccesorios" class="carousel slide carrusel-producto" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./img/img-grilla-productos/accesorio1.jpg" class="d-block w-100" alt="Gorro térmico HH">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/accesorio2.jpg" class="d-block w-100" alt="Pasamontañas técnico">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/img-grilla-productos/accesorio3.jpg" class="d-block w-100" alt="Mochila porta herramientas">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carruselAccesorios" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carruselAccesorios" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+                <button class="grilla-producto-button">Ver más modelos</button>
+            </article>
         </div>
+        <div class="contenedor-videos">
+                <h3 class="titulo-videos">Tecnología Helly Hansen en acción</h3>
+                
+                <div class="grilla-videos">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/pIGjluJuDP4?si=uHRe9zNA-UfGefnA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/kIHn1n-zadc?si=f509fQJ5wRtObgN-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/_OfSTKcT5nE?si=YiLWlMqqem2qd9c3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/bCfqoRI9Edc?si=9vgqdByISeQDi30I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
       </section>
-      <br><br>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/kIHn1n-zadc?si=t23HlrobyIT4VC5j"
-        title="YouTube video player"
-        frameborder="0"
-        allow="
-          accelerometer;
-          autoplay;
-          clipboard-write;
-          encrypted-media;
-          gyroscope;
-          picture-in-picture;
-          web-share;
-        "
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
+      
     </main>
+
     <footer class="footer-principal">
-    <div class="footer-contenedor">
-        
-        <div class="footer-columna">
-            <h3>Muni Work</h3>
-            <p>Importadores oficiales de Helly Hansen Workwear en Argentina. Elevamos el estándar de protección para tu equipo.</p>
+        <div class="footer-contenedor">
+            
+            <div class="footer-columna">
+                <img src="./img/img-logos/muniwork2.png" alt="Logo Institucional Muni Work" class="logo-footer">
+                <p>Importadores oficiales de Helly Hansen Workwear en Argentina. Elevamos el estándar de protección para tu equipo.</p>
+            </div>
+
+            <div class="footer-columna">
+                <div>Enlaces Rápidos</div>
+                <ul>
+                    <li><a href="./page/galeria.html">Galería de imágenes</a></li>
+                    <li><a href="./page/tecnologias.html">Descubrí tecnología</a></li>
+                    <li><a href="./page/contacto.html">Ventas corporativas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <div class="contacto-footer">Contacto</div>
+                <a href="https://maps.app.goo.gl/8xS5Ddjj7dEuJg738"> 📍 Avenida Cabildo 1749, CABA.</a>
+                <a href="mailto:contacto@muniwork.com.ar">✉️ contacto@muniwork.com.ar</a>
+                <div class="redes-sociales">
+                    <a href="https://www.facebook.com/p/Muni-Work-61563882611862/" target="_blank" class="icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/muni_work/" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://ar.linkedin.com/company/muniwork" target="_blank" class="icon linkedin"><i class="fab fa-linkedin"></i></a> 
+                </div>
+            </div>
+
         </div>
 
-        <div class="footer-columna">
-            <h3>Enlaces Rápidos</h3>
-            <ul>
-                <li><a href="./page/locales.html">Sucursal Gurruchaga</a></li>
-                <li><a href="./page/tecnologias.html">Tecnología Noruega</a></li>
-                <li><a href="./page/contacto.html">Ventas Corporativas</a></li>
-            </ul>
+        <div class="footer-copyright">
+            <p>&copy; 2026 MUNIDEPOT SRL. Sitio desarrollado por Ignacio Marengo. Todos los derechos reservados.</p>
         </div>
-
-        <div class="footer-columna">
-            <h3>Contacto</h3>
-            <p>📍 Gurruchaga 870, CABA.</p>
-            <p>✉️ contacto@muniwork.com.ar</p>
-            <p>📱 Instagram | LinkedIn</p>
-        </div>
-
-    </div>
-
-    <div class="footer-copyright">
-        <p>&copy; 2026 Muni Work. Sitio desarrollado por Ignacio Marengo.</p>
-    </div>
   </footer>
+  <a href="https://wa.me/+5491178535718" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

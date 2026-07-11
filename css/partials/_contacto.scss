@@ -1,0 +1,44 @@
+.seccion-contacto {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+
+    .contenedor-formulario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    border-top: 4px solid #d11241;
+
+        .formulario-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+
+            @include tablet {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                .campo { display: flex; flex-direction: column; }
+                .campo label { font-weight: bold; font-size: 13px; margin-bottom: 6px; color: #333; }
+                .campo input, .campo select, .campo textarea {
+                    padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; resize: none;
+                }
+                .campo input:focus, .campo select:focus, .campo textarea:focus { border-color: #ea740e; outline: none; }
+
+                .boton button {
+                    background-color: $mainColor; color: white; border: none; padding: 15px;
+                    font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; text-transform: uppercase; width: 100%;
+                }
+                .boton button:hover { background-color: #c86413; }
+                
+                @include tablet {
+                    .asunto, .mensaje, .boton { grid-column: 1 / -1; 
+                    }
+                }
+            }
+    }
+}

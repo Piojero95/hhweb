@@ -1,0 +1,97 @@
+.seccion-locales {
+  padding: 60px 20px;
+  max-width: 1300px;
+  margin: 30px;
+  background-color: #fdfdfd;
+
+  .titulo-locales {
+    font-size: 2.5rem;
+    color: $mainColor;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 15px;
+  }
+
+  .contenedor-sucursales {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; // Espacio entre las tarjetas de las sucursales
+  }
+
+  .tarjeta-sucursal {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    gap: 20px;
+
+    /* A partir de tablet, se acomodan uno al lado del otro */
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .info-sucursal {
+      flex: 1;
+
+      h2 {
+        font-size: 1.6rem;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 12px;
+          font-size: 1.1rem;
+          color: #555;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          i {
+            color: $maincolor; 
+            width: 20px;
+            text-align: center;
+          }
+
+          strong {
+            color: $maincolor; 
+          }
+        }
+      }
+    }
+
+    .accion-sucursal {
+
+      flex-shrink: 0; 
+      
+      .btn-maps {
+        display: inline-block;
+        background-color: #95b312; 
+        color: #fff;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 1.05rem;
+        text-align: center;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        white-space: nowrap; 
+
+        &:hover {
+          background-color: #0056b3;
+          transform: translateY(-2px); 
+        }
+      }
+    }
+  }
+}
