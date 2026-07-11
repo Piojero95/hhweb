@@ -86,10 +86,9 @@
             }
         }
 
-        /* Efecto al pasar el mouse */
         &:hover img {
             transform: scale(1.1);
-            border-color: #d94c26; /* Color de acento (podés cambiarlo por tu variable $mainColor) */
+            border-color: #d94c26; 
         }
 
         h5 {

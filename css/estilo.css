@@ -249,7 +249,7 @@ header nav a:hover::after {
 }
 .seccion-principal-index {
   width: 100%;
-  background-image: url(../img/HH_WW21_Q6A3361.jpg);
+  background-image: url(../../img/img-portfolio/bg-index.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -572,12 +572,9 @@ header nav a:hover::after {
     height: 190px;
   }
 }
-.seccion-equipo .tarjeta-miembro {
-  /* Efecto al pasar el mouse */
-}
 .seccion-equipo .tarjeta-miembro:hover img {
   transform: scale(1.1);
-  border-color: #d94c26; /* Color de acento (podés cambiarlo por tu variable $mainColor) */
+  border-color: #d94c26;
 }
 .seccion-equipo .tarjeta-miembro h5 {
   margin-top: 15px;
@@ -603,7 +600,7 @@ header nav a:hover::after {
 }
 .seccion-locales .titulo-locales {
   font-size: 2.5rem;
-  color: #222;
+  color: #c55420;
   margin-bottom: 40px;
   border-bottom: 2px solid #eaeaea;
   padding-bottom: 15px;
@@ -622,7 +619,6 @@ header nav a:hover::after {
   padding: 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   gap: 20px;
-  /* A partir de tablet, se acomodan uno al lado del otro */
 }
 @media (min-width: 768px) {
   .seccion-locales .tarjeta-sucursal {
@@ -633,8 +629,11 @@ header nav a:hover::after {
 }
 .seccion-locales .tarjeta-sucursal .info-sucursal {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.seccion-locales .tarjeta-sucursal .info-sucursal h2 {
+.seccion-locales .tarjeta-sucursal .info-sucursal h3 {
   font-size: 1.6rem;
   color: #333;
   margin-bottom: 20px;
@@ -645,66 +644,217 @@ header nav a:hover::after {
   margin: 0;
 }
 .seccion-locales .tarjeta-sucursal .info-sucursal ul li {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   font-size: 1.1rem;
   color: #555;
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  line-height: 1.5;
+  position: relative;
+  padding-left: 32px;
 }
 .seccion-locales .tarjeta-sucursal .info-sucursal ul li i {
-  color: #c94b32;
-  width: 20px;
-  text-align: center;
+  color: #c55420;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  font-size: 1.1rem;
 }
 .seccion-locales .tarjeta-sucursal .info-sucursal ul li strong {
-  color: #c94b32;
+  color: #c55420;
+  margin-right: 4px;
 }
-.seccion-locales .tarjeta-sucursal .accion-sucursal {
-  /* Asegura que el botón no se encoja ni se estire de más */
-  flex-shrink: 0;
+.seccion-locales .tarjeta-sucursal .mapa-sucursal {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 3px solid transparent;
+  transition: border-color 0.4s ease;
 }
-.seccion-locales .tarjeta-sucursal .accion-sucursal .btn-maps {
-  display: inline-block;
-  background-color: #007bff; /* Color azul característico del botón de Maps */
-  color: #fff;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 1.05rem;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  white-space: nowrap;
-}
-.seccion-locales .tarjeta-sucursal .accion-sucursal .btn-maps:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-}
-
-.container-tecnologias {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  padding: 20px;
-}
-.container-tecnologias .item-tech {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-left: 4px solid #d0021b;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.container-tecnologias .item-tech.principal {
-  background-color: #ffffff;
-  border-left: 4px solid #222222;
+@media screen and (min-width: 768px) {
+  .seccion-locales .tarjeta-sucursal .mapa-sucursal {
+    width: 280px;
+    height: 250px;
+    flex-shrink: 0;
+  }
 }
 @media screen and (min-width: 1024px) {
-  .container-tecnologias {
-    max-width: 1200px;
-    margin: 0 auto;
-    grid-template-columns: 250px 1fr 250px;
+  .seccion-locales .tarjeta-sucursal .mapa-sucursal {
+    width: 500px;
   }
+}
+.seccion-locales .tarjeta-sucursal .mapa-sucursal iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.seccion-tecnologias-dinamica {
+  padding: 10px 20px 20px 20px;
+  background-color: #fcfcfc;
+}
+.seccion-tecnologias-dinamica .contenedor-principal {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.seccion-tecnologias-dinamica .titulos-tecnologia {
+  padding: 50px 10px;
+  width: 100%;
+  background-image: url(../../img/img-portfolio/detalle-banner.jpg);
+  background-position: 195% 50%;
+  background-size: 90%;
+}
+.seccion-tecnologias-dinamica .titulos-tecnologia .titulo-general {
+  text-align: start;
+  max-width: 480px;
+  min-height: 100px;
+  font-size: 2.8rem;
+  color: #c55420;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.seccion-tecnologias-dinamica .titulos-tecnologia .subtitulo-general {
+  text-align: start;
+  color: #666;
+  max-width: 380px;
+  min-height: 50px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+.seccion-tecnologias-dinamica .grupo-categoria {
+  margin-bottom: 60px;
+}
+.seccion-tecnologias-dinamica .grupo-categoria .titulo-categoria {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #c55420;
+  margin: 30px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eaeaea;
+}
+.seccion-tecnologias-dinamica {
+  /* Contenedor para agrupar Primeras Capas y Calzado */
+}
+.seccion-tecnologias-dinamica .grupos-compartidos {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  .seccion-tecnologias-dinamica .grupos-compartidos {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos mitades exactas */
+    gap: 30px;
+    /* Al estar en media pantalla, forzamos que adentro solo haya 2 columnas */
+  }
+  .seccion-tecnologias-dinamica .grupos-compartidos .grid-tech {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.seccion-tecnologias-dinamica {
+  /* Grilla responsiva general para las tarjetas */
+}
+.seccion-tecnologias-dinamica .grid-tech {
+  display: grid;
+  gap: 30px;
+  /* Celulares: 1 columna */
+  grid-template-columns: 1fr;
+  /* Tablets: 2 columnas */
+}
+@media (min-width: 768px) {
+  .seccion-tecnologias-dinamica .grid-tech {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.seccion-tecnologias-dinamica .grid-tech {
+  /* Desktop: 4 columnas (para los grupos que ocupan toda la pantalla) */
+}
+@media (min-width: 1024px) {
+  .seccion-tecnologias-dinamica .grid-tech {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.seccion-tecnologias-dinamica {
+  /* LA MAGIA DE LA TARJETA */
+}
+.seccion-tecnologias-dinamica .tarjeta-flip {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  min-height: 280px;
+  display: flex;
+  cursor: pointer;
+  /* Capa Frontal: El Texto */
+}
+.seccion-tecnologias-dinamica .tarjeta-flip .frente-texto {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  background-color: #fff;
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.seccion-tecnologias-dinamica .tarjeta-flip .frente-texto h4 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.seccion-tecnologias-dinamica .tarjeta-flip .frente-texto p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.seccion-tecnologias-dinamica .tarjeta-flip {
+  /* Capa Trasera: La Imagen */
+}
+.seccion-tecnologias-dinamica .tarjeta-flip .dorso-imagen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: scale(1.1);
+}
+.seccion-tecnologias-dinamica .tarjeta-flip .dorso-imagen img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.seccion-tecnologias-dinamica .tarjeta-flip .dorso-imagen::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.seccion-tecnologias-dinamica .tarjeta-flip {
+  /* EL EFECTO HOVER */
+}
+.seccion-tecnologias-dinamica .tarjeta-flip:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.seccion-tecnologias-dinamica .tarjeta-flip:hover .frente-texto {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.seccion-tecnologias-dinamica .tarjeta-flip:hover .dorso-imagen {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .seccion-contacto {

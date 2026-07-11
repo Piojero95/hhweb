@@ -15,7 +15,7 @@
   .contenedor-sucursales {
     display: flex;
     flex-direction: column;
-    gap: 30px; // Espacio entre las tarjetas de las sucursales
+    gap: 30px; 
   }
 
   .tarjeta-sucursal {
@@ -28,7 +28,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     gap: 20px;
 
-    /* A partir de tablet, se acomodan uno al lado del otro */
     @media (min-width: 768px) {
       flex-direction: row;
       align-items: center;
@@ -37,8 +36,11 @@
 
     .info-sucursal {
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-      h2 {
+      h3 {
         font-size: 1.6rem;
         color: #333;
         margin-bottom: 20px;
@@ -50,48 +52,55 @@
         margin: 0;
 
         li {
-          margin-bottom: 12px;
+          margin-bottom: 15px;
           font-size: 1.1rem;
           color: #555;
-          display: flex;
-          align-items: center;
-          gap: 10px;
+          line-height: 1.5;
+          
+          position: relative;
+          padding-left: 32px; 
 
           i {
-            color: $maincolor; 
-            width: 20px;
-            text-align: center;
+            color: $mainColor; 
+            position: absolute; 
+            left: 0;
+            top: 5px; 
+            font-size: 1.1rem;
           }
 
           strong {
-            color: $maincolor; 
+            color: $mainColor; 
+            margin-right: 4px; 
           }
         }
       }
     }
 
-    .accion-sucursal {
+    .mapa-sucursal {
+      width: 100%;
+      height: 250px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border: 3px solid transparent; 
+      transition: border-color 0.4s ease;
 
-      flex-shrink: 0; 
-      
-      .btn-maps {
-        display: inline-block;
-        background-color: #95b312; 
-        color: #fff;
-        text-decoration: none;
-        padding: 14px 28px;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: 1.05rem;
-        text-align: center;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-        white-space: nowrap; 
+      @include tablet {
+        width: 280px; 
+        height: 250px;
+        flex-shrink: 0; 
+      }
 
-        &:hover {
-          background-color: #0056b3;
-          transform: translateY(-2px); 
-        }
+      @include desktop {
+        width: 500px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
       }
     }
-  }
-}
+        }
+      }
+    
