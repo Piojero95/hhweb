@@ -7,31 +7,34 @@
     background-attachment: fixed;
     padding-bottom: 50px; 
     margin-bottom: 0;
+    display: flex !important;
+    flex-direction: column !important;
 }
 
 .primera-plana {
     width: 100%;
-    min-height: 35vh; 
+    min-height: 18vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
     text-align: center;
-    padding: 40px 20px; 
+    padding: 0px 20px; 
 
     h1 {
-        font-size: 2rem; 
+        font-size: 2.2rem; 
         color: rgb(255, 255, 255);
         text-shadow: 2px 2px 5px rgba(0,0,0,0.7); 
         
         @include tablet {
             font-size: 3rem; 
             padding-right: 15px;
+            margin-top: 35px;
         }
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 1.3rem;
         color: white;
         text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         
@@ -96,6 +99,10 @@
                 filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.8));
             }
         }
+    }
+
+    h3 {
+        color: $mainColor;
     }
 
     p {

@@ -3,11 +3,15 @@
   max-width: 1300px;
   margin: 30px;
   background-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
   .titulo-locales {
     font-size: 2.5rem;
     color: $mainColor;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
     border-bottom: 2px solid #eaeaea;
     padding-bottom: 15px;
   }

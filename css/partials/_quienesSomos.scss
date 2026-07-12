@@ -1,13 +1,45 @@
 .seccion-quienes-somos {
-    padding: 40px 20px;
+    padding: 10px 20px;
     max-width: 1300px;
     margin: 0 auto;
 
+    .banner-quienes {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(43, 42, 42, 0.85)), url(../../img/img-portfolio/banner-quienes.jpg);
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 150px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    
+        .titulos-quienes {
+        width: 100%;
+        text-align: center;
+
+            .titulo-general {
+            font-size: 1.8rem;
+            color: $mainColor;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-left: 10px;
+            }
+            .subtitulo-general {
+            color: #d3d0d0;
+            font-size: 1.2rem;
+            font-weight: 400;
+            }
+        }
+        }
+    }
+
     section {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
         margin-bottom: 20px;
 
         @include tablet {
@@ -17,8 +49,8 @@
 
         .texto {
             flex: 1;
-            h2 { color: $mainColor; margin-bottom: 15px; }
-            p { line-height: 2.6; color: #444; }
+            h3 { color: $mainColor; margin-bottom: 15px;}
+            p { line-height: 1.6; color: #444; animation-duration: 3s;}
         }
 
         .imagen {
@@ -27,26 +59,35 @@
                 width: 100%;
                 border-radius: 15px;
                 box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                margin-bottom: 15px;
             }
         }
     }
-
-    
-}
 
 .seccion-equipo {
     padding: 30px;
     width: 100%;
     background-color: #fdfdfd;
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: center; 
+    gap: 40px;
+
+    @include desktop {
+        flex-direction: column;
+    }
 
     .titulo-equipo-grande {
         text-align: center;
         font-size: 3rem;
         font-weight: bold;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         color: #222;
         text-transform: uppercase;
         letter-spacing: 2px;
+        animation-delay: 2s;
+        animation-duration: 3s;
+            
     }
 
     .equipo-grid {
@@ -79,7 +120,6 @@
             box-shadow: 0 8px 15px rgba(0,0,0,0.15);
             transition: transform 0.3s ease, border-color 0.3s ease;
             
-            
             @include desktop {
                 width: 160px;
                 height: 190px;
@@ -88,10 +128,10 @@
 
         &:hover img {
             transform: scale(1.1);
-            border-color: #d94c26; 
+            border-color: $mainColor; 
         }
 
-        h5 {
+        h4 {
             margin-top: 15px;
             font-size: 1.1rem;
             font-weight: 600;
@@ -108,3 +148,11 @@
         }
     }
 }
+
+.tracking-in-expand{-webkit-animation:tracking-in-expand 1.7s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand 1.7s cubic-bezier(.215,.61,.355,1.000) both}
+@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+
+.fade-in-left{-webkit-animation:fade-in-left 2s cubic-bezier(.165,.84,.44,1.000) both;animation:fade-in-left 2s cubic-bezier(.165,.84,.44,1.000) both}
+@-webkit-keyframes fade-in-left{0%{-webkit-transform:translateX(-50px);transform:translateX(-50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes fade-in-left{0%{-webkit-transform:translateX(-50px);transform:translateX(-50px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+
+
