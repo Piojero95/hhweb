@@ -375,6 +375,7 @@ header nav a:hover::after {
   cursor: pointer;
   font-weight: bold;
   margin-top: auto;
+  text-decoration: none;
 }
 .grilla-producto-button:hover {
   background-color: #881f05;
@@ -869,7 +870,7 @@ header nav a:hover::after {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
-  border-top: 4px solid #d11241;
+  border-top: 4px solid #c55420;
 }
 .seccion-contacto .contenedor-formulario .formulario-grid {
   display: grid;
