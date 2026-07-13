@@ -64,6 +64,23 @@
         }
     }
 
+    .bloque-historia {
+            flex-direction: column;
+
+            @include tablet {
+                flex-direction: row;
+            }
+        }
+
+    .bloque-equipo {
+            flex-direction: column;
+
+            @include tablet {
+                flex-direction: row;
+            }
+        }
+     
+
 .seccion-equipo {
     padding: 30px;
     width: 100%;

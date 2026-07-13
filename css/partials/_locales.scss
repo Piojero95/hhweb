@@ -1,25 +1,34 @@
+.sucursal-contenedor {
+background-image: linear-gradient(rgba(189, 183, 183, 0.4), rgba(43, 36, 36, 0.4)), url(../../img/img-portfolio/sucursaless.jpg);
+background-size: cover; 
+background-position: center;
+background-repeat: no-repeat;
+
+}
 .seccion-locales {
-  padding: 60px 20px;
+  padding: 40px 20px;
   max-width: 1300px;
-  margin: 30px;
-  background-color: #fdfdfd;
+  margin: 5px 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
   .titulo-locales {
-    font-size: 2.5rem;
-    color: $mainColor;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 15px;
+    font-size: 2.7rem;
+    color: black;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    border-bottom: 6px solid $mainColor;
+    padding-bottom: 1px;
+
   }
 
   .contenedor-sucursales {
     display: flex;
     flex-direction: column;
     gap: 30px; 
+    margin-right: 0px;
+    min-width: 100%;
   }
 
   .tarjeta-sucursal {
@@ -28,11 +37,13 @@
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: 8px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     gap: 20px;
+    width: 100%;
 
-    @media (min-width: 768px) {
+    @include tablet {
+      max-height: 200px;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
@@ -44,7 +55,7 @@
       flex-direction: column;
       justify-content: center;
 
-      h3 {
+      h2 {
         font-size: 1.6rem;
         color: #333;
         margin-bottom: 20px;
@@ -59,7 +70,7 @@
           margin-bottom: 15px;
           font-size: 1.1rem;
           color: #555;
-          line-height: 1.5;
+          line-height: 1;
           
           position: relative;
           padding-left: 32px; 
@@ -68,7 +79,7 @@
             color: $mainColor; 
             position: absolute; 
             left: 0;
-            top: 5px; 
+            top: -1px; 
             font-size: 1.1rem;
           }
 
@@ -91,7 +102,7 @@
 
       @include tablet {
         width: 280px; 
-        height: 250px;
+        height: 180px;
         flex-shrink: 0; 
       }
 
@@ -108,3 +119,5 @@
         }
       }
     
+.tracking-in-contract{-webkit-animation:tracking-in-contract 1.4s cubic-bezier(.47,0.000,.745,.715) alternate both;animation:tracking-in-contract 1.4s cubic-bezier(.47,0.000,.745,.715) alternate both}
+@-webkit-keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}@keyframes tracking-in-contract{0%{letter-spacing:1em;opacity:0}40%{opacity:.6}100%{letter-spacing:normal;opacity:1}}

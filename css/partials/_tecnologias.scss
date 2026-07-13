@@ -3,7 +3,7 @@
   background-color: #fcfcfc;
 
   .contenedor-principal {
-    max-width: 1300px;
+    max-width: auto;
     margin: 0 auto;
   }
     .titulos-tecnologia {
@@ -12,31 +12,55 @@
         background-image: url(../../img/img-portfolio/detalle-banner.jpg) ;
         background-position: 195% 50%;
         background-size: 90%;
+        animation-delay: 0.5s;
+
+        @include tablet {
+          height: 200px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 25px 10px;
+        }
 
         .titulo-general {
             text-align: start;
             max-width: 480px;
             min-height: 100px;
-            font-size: 2.8rem;
+            font-size: 2.3rem;
             color: $mainColor;
             text-transform: uppercase;
             font-weight: 700;
             margin-left: 20px;
+            animation-delay: 1s;
         }
 
         .subtitulo-general {
             text-align: start;
-            color: #666;
+            color: #e6dede;
             max-width: 380px;
             min-height: 50px;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-size: 1.6rem;
             margin-left: 20px;
-    }
+            animation-delay: 1.5s;
+        }
+
+        @include tablet {
+          .titulo-general {
+            font-size: 2rem;
+            margin-bottom: 0px;
+
+          }
+          .subtitulo-general{
+            font-size: 1rem;
+            }
+        }
     }
 
   .grupo-categoria {
     margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     .titulo-categoria {
       text-align: center;  
@@ -48,43 +72,38 @@
     }
   }
 
-  /* Contenedor para agrupar Primeras Capas y Calzado */
   .grupos-compartidos {
     display: flex;
     flex-direction: column;
     
     @include desktop {
       display: grid;
-      grid-template-columns: 1fr 1fr; /* Divide la pantalla en dos mitades exactas */
+      grid-template-columns: 2fr 2fr; 
       gap: 30px; 
       
-      /* Al estar en media pantalla, forzamos que adentro solo haya 2 columnas */
       .grid-tech {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 2fr 2fr;
+        flex-grow: 1;
       }
     }
   }
 
-  /* Grilla responsiva general para las tarjetas */
   .grid-tech {
     display: grid;
     gap: 30px;
-    
-    /* Celulares: 1 columna */
     grid-template-columns: 1fr;
+    align-items: stretch;
 
-    /* Tablets: 2 columnas */
-    @media (min-width: 768px) {
+    @include tablet {
       grid-template-columns: repeat(2, 1fr);
     }
-
-    /* Desktop: 4 columnas (para los grupos que ocupan toda la pantalla) */
-    @media (min-width: 1024px) {
+    @include desktop  {
       grid-template-columns: repeat(4, 1fr);
     }
   }
 
-  /* LA MAGIA DE LA TARJETA */
   .tarjeta-flip {
     position: relative;
     background-color: #fff;
@@ -92,13 +111,13 @@
     border: 1px solid #eaeaea;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    min-height: 280px; 
     display: flex;
+    flex-direction: column;
     cursor: pointer;
 
-    /* Capa Frontal: El Texto */
     .frente-texto {
       padding: 30px;
+      flex: 1;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -123,7 +142,6 @@
       }
     }
 
-    /* Capa Trasera: La Imagen */
     .dorso-imagen {
       position: absolute;
       top: 0;
@@ -149,7 +167,6 @@
       }
     }
 
-    /* EL EFECTO HOVER */
     &:hover {
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
       
