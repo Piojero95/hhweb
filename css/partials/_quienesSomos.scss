@@ -78,6 +78,17 @@
             @include tablet {
                 flex-direction: row;
             }
+
+            .visita-showroom {
+                color: $mainColor;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: #683416;
+                }
+            }
         }
      
 

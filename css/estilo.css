@@ -632,6 +632,15 @@ section .imagen img {
     flex-direction: row;
   }
 }
+.bloque-equipo .visita-showroom {
+  color: #c55420;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.bloque-equipo .visita-showroom:hover {
+  text-decoration: underline;
+  color: #683416;
+}
 
 .seccion-equipo {
   padding: 30px;
