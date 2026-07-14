@@ -93,6 +93,11 @@
                 height: 180px; 
                 width: 100%;
                 object-fit: contain; 
+
+                @include desktop {
+                    max-height: 180px;
+                    max-width: 400px;
+                }
             }
 
             .carousel-control-prev-icon,
