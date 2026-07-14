@@ -124,8 +124,7 @@ header nav a::after {
 }
 header nav a.active {
   color: rgba(241, 140, 57, 0.9058823529);
-  text-decoration: underline;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 header nav a:hover {
   color: white;
