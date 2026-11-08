@@ -1,27 +1,47 @@
-// --- 2. CAPTURA DE DATOS ---
-// 3 datos distintos usando prompt()
-let empresaCliente = prompt("Bienvenido a Muni Work. ¿Cuál es el nombre de su empresa?");
-let cantidadCamperas = prompt("¿Cuántas camperas Helly Hansen necesita cotizar?");
-let precioUnitario = prompt("¿Cuál es el precio unitario de la prenda (en pesos)?");
+// --- SIMULADOR BÁSICO MUNI WORK ---
 
-// --- 3. PROCESAMIENTO ---
-// Convertirs números solicitados vía prompt (que entran como texto) a tipo number
-let cantidadProcesada = Number(cantidadCamperas);
-let precioProcesado = Number(precioUnitario);
+let total = 0;
 
-// Operación matemática básica con los números solicitados
-let costoTotal = cantidadProcesada * precioProcesado;
+alert("Bienvenido al cotizador de Muni Work.");
 
-// Concat strings con la infor solicitada al usuario
-let mensajePresupuesto = "Presupuesto para " + empresaCliente + ":\n" + 
-                         "Llevando " + cantidadProcesada + " camperas HH a $" + precioProcesado + " c/u, " +
-                         "el total estimado es de $" + costoTotal + ".";
+// 1. Pedimos el primer producto ANTES del bucle
+let producto = prompt("Ingrese el producto: campera, botas o guantes. (Escriba ESC para salir)");
 
-// --- 4. SALIDA DE DATOS ---
-// Alert() para mostrar el mensaje final al cliente
-alert(mensajePresupuesto);
+// 2. BUCLE WHILE: Se repite mientras el usuario NO escriba exactamente ESC
+while (producto !== "ESC") {
+    
+    let precio = 0;
 
-// Dejar un registro interno en la consola del navegador
-console.log("Cotización exitosa para la empresa: " + empresaCliente);
-console.log("Total a facturar: $" + costoTotal);
+    // 3. CONDICIONALES: Evaluamos qué producto ingresó
+    if (producto === "campera") {
+        precio = 150000;
+    } else if (producto === "botas") {
+        precio = 90000;
+    } else if (producto === "guantes") {
+        precio = 25000;
+    } else {
+        alert("No tenemos ese producto.");
+    }
 
+    // Si el precio es mayor a 0, significa que escribió un producto correcto
+    if (precio > 0) {
+        // Pedimos la cantidad y la pasamos a número
+        let cantidad = Number(prompt("¿Cuántas unidades necesita?"));
+        
+        // Calculamos el subtotal (usamos const porque este cálculo no cambia en esta vuelta)
+        const subtotal = precio * cantidad;
+        
+        // Sumamos el subtotal al total general
+        total = total + subtotal; 
+        
+        alert("Agregaste " + cantidad + " " + producto + ". Subtotal: $" + subtotal);
+        console.log("Se agregaron " + cantidad + " " + producto);
+    }
+
+    // 4. CLAVE: Volvemos a pedir un producto al final para que el bucle no sea infinito
+    producto = prompt("Ingrese otro producto: campera, botas o guantes. (Escriba ESC para salir)");
+}
+
+// 5. RESULTADO FINAL: Una vez que el usuario escribió ESC, el bucle se rompe y lee esto:
+alert("Cotización terminada. El total a pagar es: $" + total);
+console.log("Cotización finalizada. Total: $" + total);
